@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubVU — Seeing the Invisible</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #f8f8fb;
+            color: #1c1c2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 560px;
+        }
+
+        /* — Wordmark — */
+        .wordmark {
+            font-size: 3.8rem;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 1.6rem;
+        }
+
+        .wordmark .sub {
+            color: #1c1c2a;
+        }
+
+        .wordmark .vu {
+            color: #4db8ff;
+            font-weight: 400;
+        }
+
+        /* — Tagline — */
+        .tagline {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 300;
+            color: #9090a8;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 4rem;
+        }
+
+        /* — Divider — */
+        .divider {
+            width: 1px;
+            height: 48px;
+            background: linear-gradient(to bottom, transparent, #4db8ff, transparent);
+            margin: 0 auto 4rem;
+            opacity: 0.4;
+        }
+
+        /* — Status — */
+        .status {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.68rem;
+            font-weight: 400;
+            color: #4db8ff;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 4rem;
+            opacity: 0.85;
+        }
+
+        /* — Contact — */
+        .contact {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 300;
+            letter-spacing: 0.04em;
+        }
+
+        .contact a {
+            color: #b0b0c4;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #1c1c2a;
+        }
+
+        /* — Footer — */
+        .footer {
+            position: fixed;
+            bottom: 2.5rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.65rem;
+            font-weight: 300;
+            color: #d0d0e0;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        /* — Corner mark — */
+        .corner {
+            position: fixed;
+            top: 2rem;
+            left: 2.5rem;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.62rem;
+            color: #c8c8d8;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            line-height: 1.8;
+        }
+
+        .corner-right {
+            position: fixed;
+            top: 2rem;
+            right: 2.5rem;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.62rem;
+            color: #c8c8d8;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-align: right;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="corner">
+        SubVU Inc.<br>
+        Est. 2026
+    </div>
+
+    <div class="corner-right">
+        Montréal<br>
+        Canada
+    </div>
+
+    <div class="container">
+        <div class="wordmark">
+            <span class="sub">Sub</span><span class="vu">VU</span>
+        </div>
+        <div class="tagline">Seeing the invisible</div>
+        <div class="divider"></div>
+        <div class="status">Coming soon</div>
+        <div class="contact">
+            <a href="mailto:rana.yekani@gmail.com">rana.yekani@gmail.com</a>
+        </div>
+    </div>
+
+    <div class="footer">Sensor technology &nbsp;·&nbsp; Structural health monitoring</div>
+
+</body>
+</html>
