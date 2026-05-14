@@ -27,6 +27,16 @@
     --section-py:  112px;
 }
 
+/* ─── Circuit background canvas ─── */
+#circuit-bg {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 999;
+}
+
 /* ─── Reset & Base ─── */
 *, *::before, *::after {
     box-sizing: border-box;
