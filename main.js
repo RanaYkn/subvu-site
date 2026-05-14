@@ -108,7 +108,7 @@
 
     var R = 0, G = 229, B = 160;   // #00e5a0
     var GRID    = 60;
-    var DENSITY = 0.45;
+    var DENSITY = 0.14;
 
     var traces = [], nodes = [], W, H, animId, t0;
 
