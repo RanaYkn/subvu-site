@@ -107,8 +107,8 @@
     var ctx = canvas.getContext('2d');
 
     var R = 0, G = 229, B = 160;   // #00e5a0
-    var GRID    = 60;
-    var DENSITY = 0.14;
+    var GRID    = 72;
+    var DENSITY = 0.09;
 
     var traces = [], nodes = [], W, H, animId, t0;
 
@@ -124,17 +124,17 @@
 
                 if (Math.random() < DENSITY) {
                     traces.push({ x1: x, y1: y, x2: x + GRID, y2: y,
-                        base: Math.random() * 0.14 + 0.06,
+                        base: Math.random() * 0.055 + 0.02,
                         phase: Math.random() * Math.PI * 2,
-                        spd: 1.2 + Math.random() * 1.4 });
+                        spd: 0.5 + Math.random() * 0.6 });
                     nodeSet[c + ',' + r] = 1;
                     nodeSet[(c+1) + ',' + r] = 1;
                 }
                 if (Math.random() < DENSITY) {
                     traces.push({ x1: x, y1: y, x2: x, y2: y + GRID,
-                        base: Math.random() * 0.14 + 0.06,
+                        base: Math.random() * 0.055 + 0.02,
                         phase: Math.random() * Math.PI * 2,
-                        spd: 1.2 + Math.random() * 1.4 });
+                        spd: 0.5 + Math.random() * 0.6 });
                     nodeSet[c + ',' + r] = 1;
                     nodeSet[c + ',' + (r+1)] = 1;
                 }
@@ -146,9 +146,9 @@
             nodes.push({
                 x: parseInt(parts[0]) * GRID,
                 y: parseInt(parts[1]) * GRID,
-                base:  Math.random() * 0.22 + 0.08,
+                base:  Math.random() * 0.08 + 0.03,
                 phase: Math.random() * Math.PI * 2,
-                spd:   1.5 + Math.random() * 1.2,
+                spd:   0.6 + Math.random() * 0.7,
                 r:     Math.random() < 0.12 ? 2.8 : 1.6
             });
         });
