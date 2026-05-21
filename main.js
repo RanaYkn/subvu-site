@@ -199,6 +199,44 @@
 })();
 
 
+/* ─── Language toggle ─── */
+(function () {
+    var STORAGE_KEY = 'subvu-lang';
+    var toggle = document.getElementById('langToggle');
+    var optEN  = document.getElementById('langEN');
+    var optFR  = document.getElementById('langFR');
+    if (!toggle) return;
+
+    function applyLang(lang) {
+        // Update button state
+        optEN.classList.toggle('active', lang === 'en');
+        optFR.classList.toggle('active', lang === 'fr');
+
+        // Swap all translated elements
+        document.querySelectorAll('[data-en]').forEach(function (el) {
+            var text = el.getAttribute('data-' + lang);
+            if (text === null) return;
+            // Use innerHTML so we can include <br> and simple inline tags
+            el.innerHTML = text;
+        });
+
+        // Update <html lang> attribute for accessibility
+        document.documentElement.setAttribute('lang', lang);
+
+        localStorage.setItem(STORAGE_KEY, lang);
+    }
+
+    toggle.addEventListener('click', function () {
+        var current = localStorage.getItem(STORAGE_KEY) || 'en';
+        applyLang(current === 'en' ? 'fr' : 'en');
+    });
+
+    // Init on load
+    var saved = localStorage.getItem(STORAGE_KEY) || 'en';
+    applyLang(saved);
+})();
+
+
 /* ─── Hero wordmark entrance ─── */
 (function () {
     const wordmark = document.querySelector('.hero__wordmark');

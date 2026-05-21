@@ -21,13 +21,20 @@
                 <span class="brand-sub">Technologies </span><span class="brand-vu">SubVU</span><span class="brand-sub"> inc.</span>
             </a>
             <nav class="nav__links" id="navLinks">
-                <a href="#mission">Mission</a>
-                <a href="#sticks">Donate a Stick</a>
-                <a href="#contact">Contact</a>
+                <a href="#mission" data-en="Mission" data-fr="Mission">Mission</a>
+                <a href="#sticks" data-en="Donate a Stick" data-fr="Donnez un bâton">Donate a Stick</a>
+                <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
             </nav>
-            <button class="nav__toggle" id="navToggle" aria-label="Open navigation">
-                <span></span><span></span><span></span>
-            </button>
+            <div class="nav__actions">
+                <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+                    <span class="lang-toggle__option" id="langEN">EN</span>
+                    <span class="lang-toggle__sep">/</span>
+                    <span class="lang-toggle__option" id="langFR">FR</span>
+                </button>
+                <button class="nav__toggle" id="navToggle" aria-label="Open navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -39,20 +46,20 @@
         <div class="hero__inner">
             <div class="hero__status">
                 <span class="pulse-dot" aria-hidden="true"></span>
-                <span>Coming Soon</span>
+                <span data-en="Coming Soon" data-fr="Bientôt disponible">Coming Soon</span>
             </div>
 
             <h1 class="hero__wordmark">
                 <span class="wm-sub">Sub</span><span class="wm-vu">VU</span>
             </h1>
 
-            <p class="hero__tagline">Seeing the invisible</p>
+            <p class="hero__tagline" data-en="Seeing the invisible" data-fr="Voir l'invisible">Seeing the invisible</p>
 
-            <a href="#contact" class="btn btn--primary">Get in Touch</a>
+            <a href="#contact" class="btn btn--primary" data-en="Get in Touch" data-fr="Nous contacter">Get in Touch</a>
         </div>
 
         <div class="hero__scroll-hint" aria-hidden="true">
-            <span>scroll</span>
+            <span data-en="scroll" data-fr="défiler">scroll</span>
             <div class="scroll-line"></div>
         </div>
     </section>
@@ -62,20 +69,20 @@
         <div class="section-inner">
             <div class="section-label">
                 <span class="label-line" aria-hidden="true"></span>
-                <span>Our Mission</span>
+                <span data-en="Our Mission" data-fr="Notre mission">Our Mission</span>
             </div>
 
             <div class="mission__layout">
                 <div class="mission__copy">
-                    <h2 class="section-heading">
+                    <h2 class="section-heading" data-en="Materials speak.<br>We translate." data-fr="Les matériaux parlent.<br>Nous traduisons.">
                         Materials speak.<br>We translate.
                     </h2>
-                    <p>
+                    <p data-en="SubVU develops next-generation flexible sensing systems that interface directly into structural materials -- capturing force, fatigue, and failure signals that have always been there but never heard." data-fr="SubVU développe des systèmes de détection flexibles de nouvelle génération qui s'interfacent directement dans les matériaux structuraux -- capturant les signaux de force, de fatigue et de défaillance qui ont toujours été présents, mais jamais entendus.">
                         SubVU develops next-generation flexible sensing systems that
-                        interface directly into structural materials — capturing force, fatigue, and failure
+                        interface directly into structural materials -- capturing force, fatigue, and failure
                         signals that have always been there but never heard.
                     </p>
-                    <p>
+                    <p data-en="Built at the intersection of materials science and signal intelligence, our technology bridges the gap between physical systems and the data-driven decisions that protect performance, extend asset life, and prevent costly failures." data-fr="Construite à l'intersection de la science des matériaux et de l'intelligence de signal, notre technologie comble le fossé entre les systèmes physiques et les décisions fondées sur les données qui protègent les performances, prolongent la durée de vie des actifs et préviennent les défaillances coûteuses.">
                         Built at the intersection of materials science and signal intelligence, our
                         technology bridges the gap between physical systems and the data-driven decisions
                         that protect performance, extend asset life, and prevent costly failures.
@@ -91,7 +98,7 @@
                                 <circle cx="16" cy="16" r="2" fill="#00e5a0"/>
                             </svg>
                         </div>
-                        <div class="stat-card__text">Composite structural health monitoring</div>
+                        <div class="stat-card__text" data-en="Composite structural health monitoring" data-fr="Surveillance de la santé structurale des composites">Composite structural health monitoring</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-card__icon" aria-hidden="true">
@@ -100,7 +107,7 @@
                                 <circle cx="28" cy="12" r="2" fill="#00e5a0"/>
                             </svg>
                         </div>
-                        <div class="stat-card__text">Real-time signal processing &amp; predictive analytics</div>
+                        <div class="stat-card__text" data-en="Real-time signal processing &amp; predictive analytics" data-fr="Traitement du signal en temps réel et analytique prédictive">Real-time signal processing &amp; predictive analytics</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-card__icon" aria-hidden="true">
@@ -111,7 +118,7 @@
                                 <path d="M12 10V8a4 4 0 0 1 8 0v2" stroke="#00e5a0" stroke-width="1.5" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <div class="stat-card__text">Flexible sensor materials engineered at the nanoscale</div>
+                        <div class="stat-card__text" data-en="Flexible sensor materials engineered at the nanoscale" data-fr="Matériaux de capteurs flexibles conçus à l'échelle nanométrique">Flexible sensor materials engineered at the nanoscale</div>
                     </div>
                 </div>
             </div>
@@ -124,12 +131,12 @@
         <div class="section-inner">
             <div class="section-label reveal">
                 <span class="label-line" aria-hidden="true"></span>
-                <span>R&amp;D Collection</span>
+                <span data-en="R&amp;D Collection" data-fr="Collection R&amp;D">R&amp;D Collection</span>
             </div>
 
             <div class="sticks__header reveal">
-                <h2 class="section-heading">Got a broken stick?<br>We want it.</h2>
-                <p class="sticks__intro">
+                <h2 class="section-heading" data-en="Got a broken stick?<br>We want it." data-fr="Vous avez un bâton brisé?<br>On le veut.">Got a broken stick?<br>We want it.</h2>
+                <p class="sticks__intro" data-en="SubVU is collecting used hockey sticks for materials research. We test real failure modes under real conditions -- blades that cracked mid-pass, shafts that snapped on a slap shot, sticks retired after a season of abuse. Your old gear becomes data." data-fr="SubVU collecte des bâtons de hockey usagés pour la recherche en matériaux. Nous étudions de vrais modes de défaillance dans de vraies conditions -- des lames fissurées en plein passage, des manches cassés sur un tir frappé, des bâtons mis au rebut après une saison d'abus. Votre vieil équipement devient données.">
                     SubVU is collecting used hockey sticks for materials research. We test real failure modes
                     under real conditions -- blades that cracked mid-pass, shafts that snapped on a slap shot,
                     sticks retired after a season of abuse. Your old gear becomes data.
@@ -137,7 +144,7 @@
             </div>
 
             <div class="sticks__conditions reveal reveal-delay-1">
-                <div class="sticks__conditions-label">We want sticks that are</div>
+                <div class="sticks__conditions-label" data-en="We want sticks that are" data-fr="Nous voulons des bâtons qui sont">We want sticks that are</div>
                 <div class="sticks__grid">
                     <div class="stick-card">
                         <div class="stick-card__icon" aria-hidden="true">
@@ -149,8 +156,8 @@
                             </svg>
                         </div>
                         <div class="stick-card__text">
-                            <div class="stick-card__title">Blade-shaft junction cracked or loose</div>
-                            <div class="stick-card__desc">The hosel joint is a primary failure site. Cracked, delaminated, or wobbling is exactly what we study.</div>
+                            <div class="stick-card__title" data-en="Blade-shaft junction cracked or loose" data-fr="Jonction lame-manche fissurée ou lâche">Blade-shaft junction cracked or loose</div>
+                            <div class="stick-card__desc" data-en="The hosel joint is a primary failure site. Cracked, delaminated, or wobbling is exactly what we study." data-fr="Le joint de talon est un site de défaillance primaire. Fissuré, délaminé ou vacillant -- c'est exactement ce que nous étudions.">The hosel joint is a primary failure site. Cracked, delaminated, or wobbling is exactly what we study.</div>
                         </div>
                     </div>
 
@@ -164,8 +171,8 @@
                             </svg>
                         </div>
                         <div class="stick-card__text">
-                            <div class="stick-card__title">Snapped mid-game</div>
-                            <div class="stick-card__desc">Clean breaks, spiral fractures, fiber pullout -- each fracture pattern tells a different structural story.</div>
+                            <div class="stick-card__title" data-en="Snapped mid-game" data-fr="Cassé en plein match">Snapped mid-game</div>
+                            <div class="stick-card__desc" data-en="Clean breaks, spiral fractures, fiber pullout -- each fracture pattern tells a different structural story." data-fr="Cassures nettes, fractures spiralées, arrachement de fibres -- chaque patron de fracture raconte une histoire structurale différente.">Clean breaks, spiral fractures, fiber pullout -- each fracture pattern tells a different structural story.</div>
                         </div>
                     </div>
 
@@ -178,8 +185,8 @@
                             </svg>
                         </div>
                         <div class="stick-card__text">
-                            <div class="stick-card__title">Collecting dust</div>
-                            <div class="stick-card__desc">No longer played with, sitting in the garage. Any brand, any flex, any age. It has more use left in it -- in a lab.</div>
+                            <div class="stick-card__title" data-en="Collecting dust" data-fr="Qui prend la poussière">Collecting dust</div>
+                            <div class="stick-card__desc" data-en="No longer played with, sitting in the garage. Any brand, any flex, any age. It has more use left in it -- in a lab." data-fr="Plus utilisé, qui traîne dans le garage. Toute marque, toute flexibilité, tout âge. Il lui reste encore de l'utilité -- dans un laboratoire.">No longer played with, sitting in the garage. Any brand, any flex, any age. It has more use left in it -- in a lab.</div>
                         </div>
                     </div>
 
@@ -192,43 +199,20 @@
                             </svg>
                         </div>
                         <div class="stick-card__text">
-                            <div class="stick-card__title">Upgraded away from</div>
-                            <div class="stick-card__desc">Perfectly functional but replaced. A stick with zero fatigue damage is a valuable baseline reference.</div>
+                            <div class="stick-card__title" data-en="Upgraded away from" data-fr="Remplacé par un modèle supérieur">Upgraded away from</div>
+                            <div class="stick-card__desc" data-en="Perfectly functional but replaced. A stick with zero fatigue damage is a valuable baseline reference." data-fr="Parfaitement fonctionnel mais remplacé. Un bâton sans dommage de fatigue est une précieuse référence de base.">Perfectly functional but replaced. A stick with zero fatigue damage is a valuable baseline reference.</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="sticks__logistics reveal reveal-delay-2">
-                <div class="sticks__drop">
-                    <div class="sticks__drop-label">Drop-off</div>
-                    <div class="sticks__drop-location">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                            <path d="M8 1.5C5.515 1.5 3.5 3.515 3.5 6c0 3.5 4.5 8.5 4.5 8.5s4.5-5 4.5-8.5c0-2.485-2.015-4.5-4.5-4.5z" stroke="#00e5a0" stroke-width="1.2" fill="none" opacity="0.8"/>
-                            <circle cx="8" cy="6" r="1.5" fill="#00e5a0" opacity="0.9"/>
-                        </svg>
-                        <span><strong>McGill Pizza</strong> -- 625 rue Milton, Montréal -- ask for Costa</span>
-                    </div>
-                </div>
-                <div class="sticks__divider" aria-hidden="true"></div>
-                <div class="sticks__contact-info">
-                    <div class="sticks__drop-label">Get in touch</div>
-                    <div class="sticks__contact-row">
-                        <a href="tel:+14388331577" class="sticks__contact-link">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                                <path d="M2 2.5C2 2.5 3 5.5 5.5 8S11.5 12 11.5 12l1.5-1.5-3-3-1.5 1c-.5-.5-2-2-2.5-2.5l1-1.5L4 2 2 2.5z" stroke="#00e5a0" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" fill="none"/>
-                            </svg>
-                            Rana -- 438-833-1577
-                        </a>
-                        <a href="mailto:contact@subvu.io" class="sticks__contact-link">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                                <rect x="1.5" y="3" width="11" height="8" rx="1.5" stroke="#00e5a0" stroke-width="1.1" opacity="0.8"/>
-                                <path d="M1.5 4.5L7 8l5.5-3.5" stroke="#00e5a0" stroke-width="1.1" stroke-linecap="round" opacity="0.8"/>
-                            </svg>
-                            contact@subvu.io
-                        </a>
-                    </div>
-                </div>
+            <div class="sticks__contact-bar reveal reveal-delay-2">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <rect x="1.5" y="3" width="11" height="8" rx="1.5" stroke="#00e5a0" stroke-width="1.1" opacity="0.8"/>
+                    <path d="M1.5 4.5L7 8l5.5-3.5" stroke="#00e5a0" stroke-width="1.1" stroke-linecap="round" opacity="0.8"/>
+                </svg>
+                <span data-en="Reach us at" data-fr="Contactez-nous à">Reach us at</span>
+                <a href="mailto:contact@subvu.io" class="sticks__contact-link">contact@subvu.io</a>
             </div>
         </div>
     </section>
@@ -238,13 +222,13 @@
         <div class="section-inner">
             <div class="section-label">
                 <span class="label-line" aria-hidden="true"></span>
-                <span>Contact</span>
+                <span data-en="Contact" data-fr="Contact">Contact</span>
             </div>
 
             <div class="contact__layout">
                 <div class="contact__copy">
-                    <h2 class="section-heading">Get in touch.</h2>
-                    <p>
+                    <h2 class="section-heading" data-en="Get in touch." data-fr="Prenez contact.">Get in touch.</h2>
+                    <p data-en="Interested in partnerships, pilot programs, or early-access opportunities? We're currently in stealth and selectively engaging with potential collaborators." data-fr="Intéressé par des partenariats, des programmes pilotes ou des opportunités d'accès anticipé? Nous sommes actuellement en mode furtif et engageons sélectivement avec des collaborateurs potentiels.">
                         Interested in partnerships, pilot programs, or early-access opportunities?
                         We're currently in stealth and selectively engaging with potential collaborators.
                     </p>
@@ -252,20 +236,20 @@
 
                 <div class="contact__card">
                     <div class="contact-item">
-                        <div class="contact-item__label">Email</div>
+                        <div class="contact-item__label" data-en="Email" data-fr="Courriel">Email</div>
                         <a href="mailto:contact@subvu.io" class="contact-item__value">
                             contact@subvu.io
                         </a>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-item__label">Location</div>
-                        <div class="contact-item__value">Montréal, Québec, Canada</div>
+                        <div class="contact-item__label" data-en="Location" data-fr="Emplacement">Location</div>
+                        <div class="contact-item__value" data-en="Montréal, Québec, Canada" data-fr="Montréal, Québec, Canada">Montréal, Québec, Canada</div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-item__label">Status</div>
-                        <div class="contact-item__value">
+                        <div class="contact-item__label" data-en="Status" data-fr="Statut">Status</div>
+                        <div class="contact-item__value" data-en='<span class="pulse-dot pulse-dot--sm" aria-hidden="true"></span>Stealth Mode -- Est. 2026' data-fr='<span class="pulse-dot pulse-dot--sm" aria-hidden="true"></span>Mode furtif -- Fondée en 2026'>
                             <span class="pulse-dot pulse-dot--sm" aria-hidden="true"></span>
-                            Stealth Mode — Est. 2026
+                            Stealth Mode -- Est. 2026
                         </div>
                     </div>
                 </div>
@@ -280,8 +264,8 @@
                 <span class="footer__name">Technologies SubVU inc.</span>
                 <span class="footer__loc">Montréal, Canada</span>
             </div>
-            <div class="footer__tagline">Composite structural health monitoring</div>
-            <div class="footer__copy">&copy; 2026 Technologies SubVU inc. All rights reserved.</div>
+            <div class="footer__tagline" data-en="Composite structural health monitoring" data-fr="Surveillance de la santé structurale des composites">Composite structural health monitoring</div>
+            <div class="footer__copy" data-en="&copy; 2026 Technologies SubVU inc. All rights reserved." data-fr="&copy; 2026 Technologies SubVU inc. Tous droits réservés.">&copy; 2026 Technologies SubVU inc. All rights reserved.</div>
         </div>
     </footer>
 
