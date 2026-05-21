@@ -729,6 +729,227 @@ ul { list-style: none; }
 
 
 /* ═══════════════════════════════════
+   STICK COLLECTION
+═══════════════════════════════════ */
+
+.sticks {
+    background: var(--bg-2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+}
+
+/* Accent stripe on the left edge */
+.sticks::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+    opacity: 0.5;
+}
+
+.sticks__header {
+    margin-bottom: 3.5rem;
+    max-width: 680px;
+}
+
+.sticks__intro {
+    color: var(--text-2);
+    font-size: 1.02rem;
+    line-height: 1.8;
+    margin-top: 1.4rem;
+}
+
+/* Conditions grid */
+.sticks__conditions {
+    margin-bottom: 3.5rem;
+}
+
+.sticks__conditions-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    margin-bottom: 1.6rem;
+}
+
+.sticks__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .sticks__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.stick-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.5rem;
+    transition: border-color var(--transition), background var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.stick-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.stick-card:hover {
+    border-color: var(--border-h);
+    background: var(--bg-card-h);
+}
+
+.stick-card:hover::after {
+    opacity: 0.7;
+}
+
+.stick-card__icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    margin-top: 2px;
+}
+
+.stick-card__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.stick-card__title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--heading);
+    line-height: 1.35;
+}
+
+.stick-card__desc {
+    font-size: 0.85rem;
+    color: var(--text-2);
+    line-height: 1.6;
+}
+
+/* Logistics strip */
+.sticks__logistics {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+@media (min-width: 760px) {
+    .sticks__logistics {
+        flex-direction: row;
+        align-items: stretch;
+    }
+}
+
+.sticks__drop,
+.sticks__contact-info {
+    padding: 1.6rem 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.sticks__divider {
+    background: var(--border);
+    flex-shrink: 0;
+}
+
+@media (max-width: 759px) {
+    .sticks__divider {
+        height: 1px;
+        width: auto;
+    }
+}
+
+@media (min-width: 760px) {
+    .sticks__divider {
+        width: 1px;
+        height: auto;
+    }
+}
+
+.sticks__drop-label {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.75;
+}
+
+.sticks__drop-location {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.55;
+}
+
+.sticks__drop-location svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.sticks__drop-location strong {
+    color: var(--heading);
+    font-weight: 600;
+}
+
+.sticks__contact-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.sticks__contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.92rem;
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity var(--transition);
+}
+
+.sticks__contact-link:hover {
+    opacity: 0.75;
+}
+
+.sticks__contact-link svg {
+    flex-shrink: 0;
+}
+
+
+/* ═══════════════════════════════════
    CONTACT
 ═══════════════════════════════════ */
 
