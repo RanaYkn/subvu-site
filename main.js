@@ -237,6 +237,49 @@
 })();
 
 
+/* ─── Cursor glow — Lumos effect ─── */
+(function () {
+    var glow = document.getElementById('cursor-glow');
+    if (!glow) return;
+
+    // Skip on touch-only devices where there is no cursor
+    if (window.matchMedia('(hover: none)').matches) return;
+
+    var mouseX = 0, mouseY = 0;
+    var rafPending = false;
+
+    function applyPosition() {
+        glow.style.left = mouseX + 'px';
+        glow.style.top  = mouseY + 'px';
+        rafPending = false;
+    }
+
+    document.addEventListener('mousemove', function (e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        // Make visible on first movement
+        if (glow.style.opacity !== '1') {
+            glow.style.opacity = '1';
+        }
+
+        if (!rafPending) {
+            rafPending = true;
+            requestAnimationFrame(applyPosition);
+        }
+    }, { passive: true });
+
+    // Fade out when cursor leaves the browser window
+    document.addEventListener('mouseleave', function () {
+        glow.style.opacity = '0';
+    });
+
+    document.addEventListener('mouseenter', function () {
+        glow.style.opacity = '1';
+    });
+})();
+
+
 /* ─── Hero wordmark entrance ─── */
 (function () {
     const wordmark = document.querySelector('.hero__wordmark');

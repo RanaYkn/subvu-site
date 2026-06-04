@@ -1112,3 +1112,31 @@ a.contact-item__value:hover {
 
     .contact__layout { gap: 2.5rem; }
 }
+
+
+/* ═══════════════════════════════════
+   CURSOR GLOW — Lumos effect
+═══════════════════════════════════ */
+
+#cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(
+        circle at center,
+        rgba(0, 229, 160, 0.09) 0%,
+        rgba(0, 229, 160, 0.045) 30%,
+        rgba(0, 229, 160, 0.015) 60%,
+        transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    will-change: transform, left, top;
+    mix-blend-mode: screen;
+}
