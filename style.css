@@ -1130,9 +1130,9 @@ a.contact-item__value:hover {
     transform: translate(-50%, -50%);
     background: radial-gradient(
         circle at center,
-        rgba(0, 229, 160, 0.09) 0%,
-        rgba(0, 229, 160, 0.045) 30%,
-        rgba(0, 229, 160, 0.015) 60%,
+        rgba(0, 229, 160, 0.18) 0%,
+        rgba(0, 229, 160, 0.09) 30%,
+        rgba(0, 229, 160, 0.03) 60%,
         transparent 100%
     );
     opacity: 0;
