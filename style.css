@@ -1122,18 +1122,18 @@ a.contact-item__value:hover {
     position: fixed;
     top: 0;
     left: 0;
-    width: 380px;
-    height: 380px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     pointer-events: none;
     z-index: 1000;
     transform: translate(-50%, -50%);
     background: radial-gradient(
         circle at center,
-        rgba(0, 229, 160, 0.18) 0%,
-        rgba(0, 229, 160, 0.09) 30%,
-        rgba(0, 229, 160, 0.03) 60%,
-        transparent 100%
+        rgba(0, 229, 160, 0.22) 0%,
+        rgba(0, 229, 160, 0.10) 35%,
+        rgba(0, 229, 160, 0.02) 65%,
+        transparent 70%
     );
     opacity: 0;
     transition: opacity 0.4s ease;
