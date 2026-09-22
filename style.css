@@ -552,6 +552,14 @@ ul { list-style: none; }
 
 .mission__copy p:last-child { margin-bottom: 0; }
 
+/* Tighten spacing within the three Values statements (3rd-5th paragraphs)
+   so they read as a grouped list under Mission/Vision rather than matching
+   the wider gap used between the two narrative paragraphs. */
+.mission__copy p:nth-child(3),
+.mission__copy p:nth-child(4) {
+    margin-bottom: 0.6rem;
+}
+
 .mission__stats {
     display: flex;
     flex-direction: column;
