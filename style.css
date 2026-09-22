@@ -472,7 +472,7 @@ ul { list-style: none; }
     letter-spacing: 0.32em;
     text-transform: uppercase;
     color: var(--text-2);
-    margin-bottom: 2.2rem;
+    margin-bottom: 3rem;
 }
 
 .hero__sub-tagline {
@@ -539,11 +539,8 @@ ul { list-style: none; }
     align-items: start;
 }
 
-@media (min-width: 840px) {
-    .mission__layout {
-        grid-template-columns: 1fr 1fr;
-        gap: 6rem;
-    }
+.mission__copy {
+    max-width: 720px;
 }
 
 .mission__copy p {
