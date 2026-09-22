@@ -287,14 +287,16 @@ ul { list-style: none; }
     border-radius: var(--radius-sm);
     padding: 0.4rem;
     opacity: 0;
+    visibility: hidden;
     transform: translateY(-4px);
     pointer-events: none;
-    transition: opacity var(--transition), transform var(--transition);
+    transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
 }
 
 .nav__group:hover .nav__submenu,
 .nav__group:focus-within .nav__submenu {
     opacity: 1;
+    visibility: visible;
     transform: translateY(0);
     pointer-events: auto;
 }
@@ -428,6 +430,7 @@ ul { list-style: none; }
     .nav__submenu {
         position: static;
         opacity: 1;
+        visibility: visible;
         transform: none;
         pointer-events: auto;
         background: transparent;
