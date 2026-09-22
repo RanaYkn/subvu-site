@@ -269,6 +269,47 @@ ul { list-style: none; }
     opacity: 1;
 }
 
+/* About group + Mission-Vision-Values submenu */
+.nav__group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav__submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.6rem;
+    min-width: 210px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.4rem;
+    opacity: 0;
+    transform: translateY(-4px);
+    pointer-events: none;
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.nav__group:hover .nav__submenu,
+.nav__group:focus-within .nav__submenu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.nav__submenu a {
+    display: block;
+    white-space: nowrap;
+    padding: 0.55rem 0.7rem;
+    border-radius: 6px;
+}
+
+.nav__submenu a:hover {
+    background: var(--accent-dim);
+}
+
 /* Nav right-side action group */
 .nav__actions {
     display: flex;
@@ -375,6 +416,29 @@ ul { list-style: none; }
     .nav__links a {
         padding: 0.8rem 2rem;
         display: block;
+    }
+
+    /* About group: always show the submenu, indented, no hover dependence */
+    .nav__group {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .nav__submenu {
+        position: static;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .nav__submenu a {
+        padding: 0.6rem 2rem 0.8rem 3rem;
     }
 }
 
@@ -532,67 +596,108 @@ ul { list-style: none; }
     border-bottom: 1px solid var(--border);
 }
 
-.mission__layout {
+/* Mission / Vision — two-column grid, single column below 840px */
+.mv-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
-    align-items: start;
+    gap: 3rem;
 }
 
-.mission__copy {
-    max-width: 720px;
+@media (min-width: 840px) {
+    .mv-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
 }
 
-.mission__copy p {
-    color: var(--text-2);
-    line-height: 1.8;
-    margin-bottom: 1.2rem;
-    font-size: 1.02rem;
-}
-
-.mission__copy p:last-child { margin-bottom: 0; }
-
-/* Tighten spacing within the three Values statements (3rd-5th paragraphs)
-   so they read as a grouped list under Mission/Vision rather than matching
-   the wider gap used between the two narrative paragraphs. */
-.mission__copy p:nth-child(3),
-.mission__copy p:nth-child(4) {
-    margin-bottom: 0.6rem;
-}
-
-.mission__stats {
+.mv-label {
     display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
 }
 
-.stat-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.2rem;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.4rem 1.6rem;
-    transition: border-color var(--transition), background var(--transition);
-}
-
-.stat-card:hover {
-    border-color: var(--border-h);
-    background: var(--bg-card-h);
-}
-
-.stat-card__icon {
+.mv-label__line {
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.6;
     flex-shrink: 0;
-    width: 32px;
-    height: 32px;
-    margin-top: 2px;
 }
 
-.stat-card__text {
-    font-size: 0.92rem;
+.mv-statement {
+    font-family: var(--sans);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--heading);
+    line-height: 1.5;
+}
+
+/* Hairline divider between the Mission/Vision block and the Values block */
+.mv-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 3.75rem 0;
+}
+
+/* Below 840px, Mission/Vision and Values are both single columns, so the
+   divider sits only a short distance above the first value's own 1px
+   top border, reading as a doubled rule. Hide it and let the values
+   grid supply the group-separating space instead. */
+@media (max-width: 839px) {
+    .mv-divider {
+        display: none;
+    }
+
+    .values-grid {
+        margin-top: 3rem;
+    }
+}
+
+/* Values — three-column grid, single column below 840px */
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+@media (min-width: 840px) {
+    .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.value {
+    border-top: 1px solid var(--border);
+    padding-top: 1.4rem;
+}
+
+.value__index {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--text-3);
+}
+
+.value__name {
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--heading);
+    margin: 0.6rem 0 0.5rem;
+}
+
+.value__text {
+    font-size: 0.95rem;
     color: var(--text-2);
-    line-height: 1.55;
+    line-height: 1.7;
 }
 
 
@@ -1120,8 +1225,6 @@ a.contact-item__value:hover {
     }
 
     .hero__scroll-hint { display: none; }
-
-    .mission__layout { gap: 3rem; }
 
     .app-card { padding: 1.6rem 1.4rem 1.4rem; }
 

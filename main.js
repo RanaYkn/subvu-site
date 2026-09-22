@@ -64,8 +64,8 @@
         '.section-label',
         '.section-heading',
         '.section-sub',
-        '.mission__copy p',
-        '.stat-card',
+        '.mv-col',
+        '.value',
         '.app-card',
         '.contact__copy p',
         '.contact__card',
@@ -78,7 +78,7 @@
         document.querySelectorAll(sel).forEach(function (el, i) {
             el.classList.add('reveal');
             // stagger cards
-            if (el.classList.contains('app-card') || el.classList.contains('stat-card')) {
+            if (el.classList.contains('app-card') || el.classList.contains('value')) {
                 el.classList.add('reveal-delay-' + Math.min(i + 1, 4));
             }
         });

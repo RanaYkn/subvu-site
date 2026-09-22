@@ -21,7 +21,12 @@
                 <span class="brand-sub">Technologies </span><span class="brand-vu">SubVU</span><span class="brand-sub"> inc.</span>
             </a>
             <nav class="nav__links" id="navLinks">
-                <a href="#mission" data-en="Mission" data-fr="Mission">Mission</a>
+                <div class="nav__group">
+                    <a href="#about" class="nav__group-trigger" data-en="About" data-fr="À propos">About</a>
+                    <div class="nav__submenu">
+                        <a href="#mission" data-en="Mission-Vision-Values" data-fr="Mission-Vision-Valeurs">Mission-Vision-Values</a>
+                    </div>
+                </div>
                 <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
             </nav>
             <div class="nav__actions">
@@ -64,24 +69,51 @@
     </section>
 
     <!-- ═══ MISSION ═══ -->
-    <section class="mission" id="mission">
-        <div class="section-inner">
-            <div class="mission__layout">
-                <div class="mission__copy">
-                    <p data-en="<strong>Mission.</strong> To extend the safe, useful life of carbon-fiber composite assets through real-time structural integrity monitoring, giving operators the data they need to maintain, repair, and replace components at the right time." data-fr="<strong>Mission.</strong> Prolonger la vie utile et sécuritaire des actifs en composite de fibre de carbone grâce à la surveillance en temps réel de leur intégrité structurale, en donnant aux exploitants les données nécessaires pour entretenir, réparer et remplacer les composants au bon moment.">
-                        <strong>Mission.</strong> To extend the safe, useful life of carbon-fiber composite assets through real-time structural integrity monitoring, giving operators the data they need to maintain, repair, and replace components at the right time.
+    <section class="mission" id="about">
+        <div class="section-inner" id="mission">
+            <div class="mv-grid">
+                <div class="mv-col">
+                    <div class="mv-label">
+                        <span class="mv-label__line" aria-hidden="true"></span>
+                        <span data-en="Mission" data-fr="Mission">Mission</span>
+                    </div>
+                    <p class="mv-statement" data-en="To extend the safe, useful life of carbon-fiber composite assets through real-time structural integrity monitoring, giving operators the data they need to maintain, repair, and replace components at the right time." data-fr="Prolonger la vie utile et sécuritaire des actifs en composite de fibre de carbone grâce à la surveillance en temps réel de leur intégrité structurale, en donnant aux exploitants les données nécessaires pour entretenir, réparer et remplacer les composants au bon moment.">
+                        To extend the safe, useful life of carbon-fiber composite assets through real-time structural integrity monitoring, giving operators the data they need to maintain, repair, and replace components at the right time.
                     </p>
-                    <p data-en="<strong>Vision.</strong> A world where high-value composite equipment is operated based on actual condition, not guesswork, reducing waste, downtime, and unnecessary replacement while improving safety and confidence." data-fr="<strong>Vision.</strong> Un monde où les équipements composites de grande valeur sont exploités selon leur état réel plutôt qu'à l'aveugle, ce qui réduit le gaspillage, les temps d'arrêt et les remplacements inutiles tout en améliorant la sécurité et la confiance.">
-                        <strong>Vision.</strong> A world where high-value composite equipment is operated based on actual condition, not guesswork, reducing waste, downtime, and unnecessary replacement while improving safety and confidence.
+                </div>
+                <div class="mv-col">
+                    <div class="mv-label">
+                        <span class="mv-label__line" aria-hidden="true"></span>
+                        <span data-en="Vision" data-fr="Vision">Vision</span>
+                    </div>
+                    <p class="mv-statement" data-en="A world where high-value composite equipment is operated based on actual condition, not guesswork, reducing waste, downtime, and unnecessary replacement while improving safety and confidence." data-fr="Un monde où les équipements composites de grande valeur sont exploités selon leur état réel plutôt qu'à l'aveugle, ce qui réduit le gaspillage, les temps d'arrêt et les remplacements inutiles tout en améliorant la sécurité et la confiance.">
+                        A world where high-value composite equipment is operated based on actual condition, not guesswork, reducing waste, downtime, and unnecessary replacement while improving safety and confidence.
                     </p>
-                    <p data-en="<strong>Collaboration.</strong> We bring together the right expertise to create advantage in conditions of extreme uncertainty." data-fr="<strong>Collaboration.</strong> Nous réunissons les bonnes expertises pour créer un avantage dans des conditions d'incertitude extrême.">
-                        <strong>Collaboration.</strong> We bring together the right expertise to create advantage in conditions of extreme uncertainty.
+                </div>
+            </div>
+
+            <div class="mv-divider" aria-hidden="true"></div>
+
+            <div class="values-grid">
+                <div class="value">
+                    <span class="value__index" aria-hidden="true">01</span>
+                    <div class="value__name" data-en="Collaboration" data-fr="Collaboration">Collaboration</div>
+                    <p class="value__text" data-en="We bring together the right expertise to create advantage in conditions of extreme uncertainty." data-fr="Nous réunissons les bonnes expertises pour créer un avantage dans des conditions d'incertitude extrême.">
+                        We bring together the right expertise to create advantage in conditions of extreme uncertainty.
                     </p>
-                    <p data-en="<strong>Innovation.</strong> We encourage ownership, listen openly, and turn strong ideas into practical solutions." data-fr="<strong>Innovation.</strong> Nous encourageons la prise d'initiative et la responsabilité, écoutons avec ouverture et transformons les idées fortes en solutions concrètes.">
-                        <strong>Innovation.</strong> We encourage ownership, listen openly, and turn strong ideas into practical solutions.
+                </div>
+                <div class="value">
+                    <span class="value__index" aria-hidden="true">02</span>
+                    <div class="value__name" data-en="Innovation" data-fr="Innovation">Innovation</div>
+                    <p class="value__text" data-en="We encourage ownership, listen openly, and turn strong ideas into practical solutions." data-fr="Nous encourageons la prise d'initiative et la responsabilité, écoutons avec ouverture et transformons les idées fortes en solutions concrètes.">
+                        We encourage ownership, listen openly, and turn strong ideas into practical solutions.
                     </p>
-                    <p data-en="<strong>Evidence through iteration.</strong> We test, learn, and improve continuously, using field data to make every decision more reliable." data-fr="<strong>Les preuves par l'itération.</strong> Nous testons, apprenons et améliorons en continu, en nous appuyant sur les données de terrain pour rendre chaque décision plus fiable.">
-                        <strong>Evidence through iteration.</strong> We test, learn, and improve continuously, using field data to make every decision more reliable.
+                </div>
+                <div class="value">
+                    <span class="value__index" aria-hidden="true">03</span>
+                    <div class="value__name" data-en="Evidence through iteration" data-fr="Les preuves par l'itération">Evidence through iteration</div>
+                    <p class="value__text" data-en="We test, learn, and improve continuously, using field data to make every decision more reliable." data-fr="Nous testons, apprenons et améliorons en continu, en nous appuyant sur les données de terrain pour rendre chaque décision plus fiable.">
+                        We test, learn, and improve continuously, using field data to make every decision more reliable.
                     </p>
                 </div>
             </div>
